@@ -14,6 +14,12 @@ module.exports = {
 			},
 			colors: {
 				_purple: "rgb(237,235,252)",
+				_darkPurple: "rgb(96,66,230)",
+				_lightOrange: "rgb(236,200,200)",
+				_orange: "rgb(219,113,97)",
+				_green: "rgb(136,195,155)",
+				_lightBlue: "rgb(221,241,254)",
+				_lightYellow: "rgb(252,240,216)",
 			},
 		},
 	},
