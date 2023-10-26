@@ -6,6 +6,7 @@ import ThirdPart from "./components/ThirdPart";
 import FourthPart from "./components/FourthPart";
 import FifthPart from "./components/FifthPart";
 import SixthPart from "./components/SixthPart";
+import SeventhPart from "./components/SevethPart";
 
 export default function Home() {
 	return (
@@ -17,6 +18,7 @@ export default function Home() {
 			<FourthPart />
 			<FifthPart />
 			<SixthPart />
+			<SeventhPart />
 		</div>
 	);
 }
