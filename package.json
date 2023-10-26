@@ -14,7 +14,8 @@
 		"react": "^18",
 		"react-dom": "^18",
 		"swiper": "^10.3.0",
-		"vara": "^1.4.1"
+		"vara": "^1.4.1",
+		"react-intersection-observer": "^9.5.2"
 	},
 	"devDependencies": {
 		"@types/node": "20.8.8",

@@ -1,6 +1,15 @@
+"use client";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 export default function SixthPart() {
+	const { ref, inView } = useInView({
+		triggerOnce: true, // This will trigger the animation only once
+		threshold: 0.2, // Adjust this value as needed
+	});
+
 	return (
-		<div className="h-screen">
+		<div className="h-screen" ref={ref}>
 			<div className="bg-_lightBlue rounded-3xl h-[600px] px-10 py-20 relative">
 				<h3 className="text-xl text-center">
 					Let your friends, family, and co-workers (anonymously) rate
@@ -11,26 +20,49 @@ export default function SixthPart() {
 				</h1>
 
 				<div className="flex justify-between mx-40 mt-10">
-					<div className="flex flex-col items-center">
+					<motion.div
+						className="flex flex-col items-center"
+						initial={{ y: 100, opacity: 0 }}
+						animate={inView ? { y: 0, opacity: 100 } : {}}
+						transition={{ type: "tween", duration: 0.5 }}
+					>
 						<img src="/One.png" className="w-12 h-12" />
 						<p className="text-sm text-gray-500 text-center">
 							Answer questions on your social skills
 						</p>
-					</div>
-					<div className="flex flex-col items-center">
+					</motion.div>
+					<motion.div
+						className="flex flex-col items-center"
+						initial={{ y: 100, opacity: 0 }}
+						animate={inView ? { y: 0, opacity: 100 } : {}}
+						transition={{
+							type: "tween",
+							duration: 0.5,
+							delay: 0.2,
+						}}
+					>
 						<img src="/Two.png" />
 						<p className="text-sm text-gray-500 text-center">
 							Let others anonymously answer the same <br />{" "}
 							questions about you
 						</p>
-					</div>
-					<div className="flex flex-col items-center">
+					</motion.div>
+					<motion.div
+						className="flex flex-col items-center"
+						initial={{ y: 100, opacity: 0 }}
+						animate={inView ? { y: 0, opacity: 100 } : {}}
+						transition={{
+							type: "tween",
+							duration: 0.5,
+							delay: 0.4,
+						}}
+					>
 						<img src="/Three.png" />
 						<p className="text-sm text-gray-500 text-center">
 							Find out where you and others see things <br /> the
 							same way - and where not!
 						</p>
-					</div>
+					</motion.div>
 				</div>
 
 				<div className="flex justify-center items-center mt-10">
@@ -40,35 +72,81 @@ export default function SixthPart() {
 							<div className="flex justify-between items-center px-4">
 								<div className="relative">
 									<div className="w-4 h-4 rounded-full bg-violet-500"></div>
-									<div className="absolute bottom-8 bg-violet-500 p-2 rounded-xl">
+									<motion.div
+										className="absolute bottom-8 bg-violet-500 p-2 rounded-xl"
+										initial={{ y: 10, opacity: 0 }}
+										animate={
+											inView ? { y: 0, opacity: 100 } : {}
+										}
+										transition={{
+											type: "tween",
+											duration: 0.5,
+											delay: 1,
+										}}
+									>
 										<p className="text-white text-md">
 											You
 										</p>
-									</div>
+									</motion.div>
 								</div>
 								<div className="relative">
 									<div className="w-4 h-4 rounded-full bg-sky-500"></div>
-									<div className="absolute top-8 bg-sky-500 w-36 p-2 rounded-xl">
+									<motion.div
+										className="absolute top-8 bg-sky-500 w-36 p-2 rounded-xl"
+										initial={{ y: 10, opacity: 0 }}
+										animate={
+											inView ? { y: 0, opacity: 100 } : {}
+										}
+										transition={{
+											type: "tween",
+											duration: 0.5,
+											delay: 1.2,
+										}}
+									>
 										<p className="text-white text-md text-center">
 											Anonymonos 1
 										</p>
-									</div>
+									</motion.div>
 								</div>
 								<div className="relative">
 									<div className="w-4 h-4 rounded-full bg-yellow-500"></div>
-									<div className="absolute bottom-8 bg-yellow-500 w-36 p-2 rounded-xl">
+									<motion.div
+										className="absolute bottom-8 bg-yellow-500 w-36 p-2 rounded-xl"
+										initial={{ y: 10, opacity: 0 }}
+										animate={
+											inView ? { y: 0, opacity: 100 } : {}
+										}
+										transition={{
+											type: "tween",
+											duration: 0.5,
+											delay: 1.4,
+										}}
+									>
 										<p className="text-white text-md text-center">
 											Anonymonos 2
 										</p>
-									</div>
+									</motion.div>
 								</div>
 								<div className="relative">
 									<div className="w-4 h-4 rounded-full bg-green-500">
-										<div className="absolute top-8 bg-green-500 w-36 p-2 rounded-xl">
+										<motion.div
+											className="absolute top-8 bg-green-500 w-36 p-2 rounded-xl"
+											initial={{ y: 10, opacity: 0 }}
+											animate={
+												inView
+													? { y: 0, opacity: 100 }
+													: {}
+											}
+											transition={{
+												type: "tween",
+												duration: 0.5,
+												delay: 1.6,
+											}}
+										>
 											<p className="text-white text-md text-center">
 												Anonymonos 3
 											</p>
-										</div>
+										</motion.div>
 									</div>
 								</div>
 							</div>

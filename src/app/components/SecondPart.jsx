@@ -11,29 +11,66 @@ import "swiper/css/pagination";
 
 import { Mousewheel, Keyboard, Autoplay } from "swiper/modules";
 
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 export default function SecondPart() {
+	const { ref, inView } = useInView({
+		triggerOnce: true, // This will trigger the animation only once
+		threshold: 0.2, // Adjust this value as needed
+	});
+
+	const path =
+		"M500 500 C 250 700, 300 300, 500 300 C 700 300, 750 700, 500 500";
+
 	return (
-		<div className="h-screen pt-32">
+		<div className="h-screen pt-32" ref={ref}>
 			<div className="grid grid-cols-3 mx-20">
-				<h3 className="text-3xl font-semibold">EQ beats IQ</h3>
-				<p className="px-10 text-lg font-normal text-gray-600">
+				<motion.h3
+					className="text-3xl font-semibold"
+					initial={{ x: -1000, opacity: 0 }}
+					animate={inView ? { x: 0, opacity: 100 } : {}}
+					transition={{ type: "tween", duration: 1 }}
+				>
+					EQ beats IQ
+				</motion.h3>
+				<motion.p
+					className="px-10 text-lg font-normal text-gray-600"
+					initial={{ x: -1000, opacity: 0 }}
+					animate={inView ? { x: 0, opacity: 100 } : {}}
+					transition={{ type: "tween", duration: 1, delay: 0.5 }}
+				>
 					People with high emotional intelligence (EQ) live more
 					fulfilled lives. They tend to be happier and have healthier
 					relationships
-				</p>
-				<p className="px-10 text-lg font-normal text-gray-600">
+				</motion.p>
+				<motion.p
+					className="px-10 text-lg font-normal text-gray-600"
+					initial={{ x: -1000, opacity: 0 }}
+					animate={inView ? { x: 0, opacity: 100 } : {}}
+					transition={{ type: "tween", duration: 1, delay: 0.7 }}
+				>
 					They are more successful in thier pursuits and make for
 					inspiring leaders. According to science, they earn $29k a
 					year.
-				</p>
+				</motion.p>
 			</div>
 
-			<div className="mx-20 mt-20">
-				<h1 className="text-5xl font-semibold">
-					Does this sound familiar...
-				</h1>
+			<div className="mx-20 my-20">
+				<div className="flex gap-5 items-center">
+					<motion.h1
+						className="text-5xl font-semibold"
+						initial={{ x: -1000, opacity: 0 }}
+						animate={inView ? { x: 0, opacity: 100 } : {}}
+						transition={{ type: "tween", duration: 1 }}
+					>
+						Does this sound familiar...
+					</motion.h1>
 
-				<div className="">
+					<img src="/purple_ghost.png" className="w-20" />
+				</div>
+
+				<div>
 					<Swiper
 						slidesPerView={3}
 						cssMode={true}

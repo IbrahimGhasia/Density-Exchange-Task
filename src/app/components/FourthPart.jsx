@@ -31,7 +31,7 @@ export default function FourthPart() {
 					centeredSlides={false}
 					className="h-[460px]"
 					autoplay={{
-						delay: 1500,
+						delay: 1000,
 						disableOnInteraction: false,
 					}}
 					style={{

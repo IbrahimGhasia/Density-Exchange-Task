@@ -1,34 +1,124 @@
+"use client";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 export default function IndexPage() {
+	const { ref, inView } = useInView({
+		triggerOnce: true, // This will trigger the animation only once
+		threshold: 0.2, // Adjust this value as needed
+	});
 	return (
-		<div className="mt-28">
+		<div className="mt-28" ref={ref}>
 			<div className="bg-_purple h-[650px] rounded-3xl grid grid-cols-2 items-center relative overflow-hidden">
 				<div className="px-14 mt-20">
 					<h6 className="text-md text-black font-normal">
 						Ahead app
 					</h6>
-					<h1 className="text-black text-7xl font-bold mt-5">
+					<motion.h1
+						initial={{ x: -1000 }}
+						animate={inView ? { x: 0 } : {}}
+						transition={{ type: "tween", duration: 1 }}
+						className="text-black text-7xl font-bold mt-5"
+					>
 						Master your life by mastering emotions
-					</h1>
+					</motion.h1>
 
 					<div className="flex items-center gap-10">
-						<div>
+						<motion.div
+							initial={{ y: 100, opacity: 0 }}
+							animate={inView ? { y: 0, opacity: 100 } : {}}
+							transition={{
+								type: "tween",
+								duration: 1,
+								delay: 0.5,
+							}}
+						>
 							<img
 								src="/app-store-badge.svg"
 								className="h-40 w-40 cursor-pointer"
 							/>
-						</div>
+						</motion.div>
 
 						<div className="flex flex-col items-center">
 							<div className="flex gap-1">
-								<img src="/star.png" className="h-6 w-6" />
-								<img src="/star.png" className="h-6 w-6" />
-								<img src="/star.png" className="h-6 w-6" />
-								<img src="/star.png" className="h-6 w-6" />
-								<img src="/star.png" className="h-6 w-6" />
+								<motion.img
+									src="/star.png"
+									className="h-6 w-6"
+									initial={{ y: 100, opacity: 0 }}
+									animate={
+										inView ? { y: 0, opacity: 100 } : {}
+									}
+									transition={{
+										type: "tween",
+										duration: 1,
+										delay: 0.6,
+									}}
+								/>
+								<motion.img
+									src="/star.png"
+									className="h-6 w-6"
+									initial={{ y: 100, opacity: 0 }}
+									animate={
+										inView ? { y: 0, opacity: 100 } : {}
+									}
+									transition={{
+										type: "tween",
+										duration: 1,
+										delay: 0.65,
+									}}
+								/>
+								<motion.img
+									src="/star.png"
+									className="h-6 w-6"
+									initial={{ y: 100, opacity: 0 }}
+									animate={
+										inView ? { y: 0, opacity: 100 } : {}
+									}
+									transition={{
+										type: "tween",
+										duration: 1,
+										delay: 0.7,
+									}}
+								/>
+								<motion.img
+									src="/star.png"
+									className="h-6 w-6"
+									initial={{ y: 100, opacity: 0 }}
+									animate={
+										inView ? { y: 0, opacity: 100 } : {}
+									}
+									transition={{
+										type: "tween",
+										duration: 1,
+										delay: 0.75,
+									}}
+								/>
+								<motion.img
+									src="/star.png"
+									className="h-6 w-6"
+									initial={{ y: 100, opacity: 0 }}
+									animate={
+										inView ? { y: 0, opacity: 100 } : {}
+									}
+									transition={{
+										type: "tween",
+										duration: 1,
+										delay: 0.8,
+									}}
+								/>
 							</div>
-							<p className="text-xs mt-2 text-gray-500">
+							<motion.p
+								className="text-xs mt-2 text-gray-500"
+								initial={{ y: 100, opacity: 0 }}
+								animate={inView ? { y: 0, opacity: 100 } : {}}
+								transition={{
+									type: "tween",
+									duration: 1,
+									delay: 1,
+								}}
+							>
 								100+ AppStore reviews
-							</p>
+							</motion.p>
 						</div>
 					</div>
 				</div>
