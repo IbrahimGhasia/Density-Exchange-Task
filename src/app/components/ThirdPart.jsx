@@ -1,6 +1,6 @@
 export default function ThirdPart() {
 	return (
-		<div className="h-screen pt-32">
+		<div className="h-screen ">
 			<div className="bg-_lightBrown rounded-3xl h-[600px] px-10 py-20 relative grid grid-cols-2">
 				<div className="px-20">
 					<p className="font-normal text-md my-5">

@@ -1,6 +1,6 @@
 export default function FifthPart() {
 	return (
-		<div className="pt-32 pb-10">
+		<div className="pb-10">
 			<div className="grid grid-cols-3 mx-20">
 				<h3 className="text-3xl font-semibold">
 					Be the best you with EQ

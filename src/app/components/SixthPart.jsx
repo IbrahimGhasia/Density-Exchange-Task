@@ -1,6 +1,6 @@
 export default function SixthPart() {
 	return (
-		<div className="h-screen pt-32">
+		<div className="h-screen">
 			<div className="bg-_lightBlue rounded-3xl h-[600px] px-10 py-20 relative">
 				<h3 className="text-xl text-center">
 					Let your friends, family, and co-workers (anonymously) rate

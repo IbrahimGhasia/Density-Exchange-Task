@@ -8,6 +8,8 @@ import FifthPart from "./components/FifthPart";
 import SixthPart from "./components/SixthPart";
 import SeventhPart from "./components/SevethPart";
 import EightPart from "./components/EightPart";
+import NinthPart from "./components/NinthPart";
+import Footer from "./components/Footer";
 
 export default function Home() {
 	return (
@@ -21,6 +23,8 @@ export default function Home() {
 			<SixthPart />
 			<SeventhPart />
 			<EightPart />
+			<NinthPart />
+			<Footer />
 		</div>
 	);
 }

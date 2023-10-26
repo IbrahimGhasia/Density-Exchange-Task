@@ -13,7 +13,7 @@ import { Mousewheel, Keyboard, Autoplay } from "swiper/modules";
 
 export default function EightPart() {
 	return (
-		<div className="h-screen mt-32">
+		<div className="h-screen">
 			<div className="h-[640px] px-20 py-20 bg-_purple rounded-3xl">
 				<div className="flex justify-between items-center">
 					<h1 className="text-5xl font-bold">Work with us</h1>

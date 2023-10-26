@@ -1,21 +1,55 @@
 "use client";
 
-import Card from "../components/UI/Card";
-import { cardData } from "../constants/CardData";
-
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
 
-import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/scrollbar";
+
+import { Scrollbar, Autoplay } from "swiper/modules";
+import { SelfImprovement } from "../constants/SelfImprovement";
+import ImprovementCard from "./UI/ImprovementCard";
 
 export default function FourthPart() {
 	return (
-		<div className="h-screen pt-32">
+		<div className="h-screen">
 			<p className="text-md font-light">
-				Wront with self-improvement & how we{"'"}re fixing it.
+				Wrong with self-improvement & how we{"'"}re fixing it.
 			</p>
 			<h1 className="text-5xl font-bold">Self-improvement. Ugh.</h1>
+
+			<div className="px-60 pt-10">
+				<Swiper
+					scrollbar={{
+						hide: false,
+					}}
+					modules={[Scrollbar, Autoplay]}
+					direction="vertical"
+					slidesPerView={3}
+					cssMode={true}
+					spaceBetween={20}
+					centeredSlides={false}
+					className="h-[460px]"
+					autoplay={{
+						delay: 1500,
+						disableOnInteraction: false,
+					}}
+					style={{
+						"--swiper-scrollbar-bg-color": "rgb(237,235,252)",
+						"--swiper-scrollbar-drag-bg-color": "rgb(96,66,230)",
+						"--swiper-scrollbar-left": "20px",
+					}}
+				>
+					{SelfImprovement.map((data, index) => (
+						<SwiperSlide key={index}>
+							<ImprovementCard
+								title={data.title}
+								desc={data.desc}
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</div>
 		</div>
 	);
 }
