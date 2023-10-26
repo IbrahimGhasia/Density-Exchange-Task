@@ -20,6 +20,7 @@ module.exports = {
 				_green: "rgb(136,195,155)",
 				_lightBlue: "rgb(221,241,254)",
 				_lightYellow: "rgb(252,240,216)",
+				_lightBrown: "rgb(252,247,242)",
 			},
 		},
 	},

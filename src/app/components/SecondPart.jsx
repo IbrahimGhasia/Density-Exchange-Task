@@ -9,13 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import {
-	Navigation,
-	Pagination,
-	Mousewheel,
-	Keyboard,
-	Autoplay,
-} from "swiper/modules";
+import { Mousewheel, Keyboard, Autoplay } from "swiper/modules";
 
 export default function SecondPart() {
 	return (
