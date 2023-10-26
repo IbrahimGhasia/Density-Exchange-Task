@@ -12,11 +12,13 @@ import ImprovementCard from "./UI/ImprovementCard";
 
 export default function FourthPart() {
 	return (
-		<div className="h-screen">
+		<div className="hidden md:block h-screen">
 			<p className="text-md font-light">
 				Wrong with self-improvement & how we{"'"}re fixing it.
 			</p>
-			<h1 className="text-5xl font-bold">Self-improvement. Ugh.</h1>
+			<h1 className="mt-5 md:mt-0 text-3xl md:text-5xl font-bold">
+				Self-improvement. Ugh.
+			</h1>
 
 			<div className="px-60 pt-10">
 				<Swiper

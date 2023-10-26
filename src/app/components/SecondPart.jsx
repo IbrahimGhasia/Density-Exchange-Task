@@ -20,12 +20,9 @@ export default function SecondPart() {
 		threshold: 0.2, // Adjust this value as needed
 	});
 
-	const path =
-		"M500 500 C 250 700, 300 300, 500 300 C 700 300, 750 700, 500 500";
-
 	return (
 		<div className="h-screen pt-32" ref={ref}>
-			<div className="grid grid-cols-3 mx-20">
+			<div className="grid gap-y-5 md:grid-cols-3 mx-5 md:mx-20">
 				<motion.h3
 					className="text-3xl font-semibold"
 					initial={{ x: -1000, opacity: 0 }}
@@ -35,7 +32,7 @@ export default function SecondPart() {
 					EQ beats IQ
 				</motion.h3>
 				<motion.p
-					className="px-10 text-lg font-normal text-gray-600"
+					className="md:px-10 text-lg font-normal text-gray-600"
 					initial={{ x: -1000, opacity: 0 }}
 					animate={inView ? { x: 0, opacity: 100 } : {}}
 					transition={{ type: "tween", duration: 1, delay: 0.5 }}
@@ -45,7 +42,7 @@ export default function SecondPart() {
 					relationships
 				</motion.p>
 				<motion.p
-					className="px-10 text-lg font-normal text-gray-600"
+					className="md:px-10 text-lg font-normal text-gray-600"
 					initial={{ x: -1000, opacity: 0 }}
 					animate={inView ? { x: 0, opacity: 100 } : {}}
 					transition={{ type: "tween", duration: 1, delay: 0.7 }}
@@ -56,10 +53,10 @@ export default function SecondPart() {
 				</motion.p>
 			</div>
 
-			<div className="mx-20 my-20">
+			<div className="hidden md:block mx-20 my-20">
 				<div className="flex gap-5 items-center">
 					<motion.h1
-						className="text-5xl font-semibold"
+						className="text-3xl md:text-5xl font-semibold"
 						initial={{ x: -1000, opacity: 0 }}
 						animate={inView ? { x: 0, opacity: 100 } : {}}
 						transition={{ type: "tween", duration: 1 }}

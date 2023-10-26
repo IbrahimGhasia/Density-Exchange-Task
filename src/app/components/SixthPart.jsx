@@ -10,16 +10,16 @@ export default function SixthPart() {
 
 	return (
 		<div className="h-screen" ref={ref}>
-			<div className="bg-_lightBlue rounded-3xl h-[600px] px-10 py-20 relative">
-				<h3 className="text-xl text-center">
+			<div className="bg-_lightBlue rounded-3xl h-[600px] px-5 md:px-10 py-10 md:py-20 relative">
+				<h3 className="text-sm md:text-xl text-center">
 					Let your friends, family, and co-workers (anonymously) rate
 					your social skills.
 				</h3>
-				<h1 className="text-5xl text-center font-bold mt-5">
+				<h1 className="text-3xl md:text-5xl text-center font-bold mt-5">
 					Ever wondered what others think of you?
 				</h1>
 
-				<div className="flex justify-between mx-40 mt-10">
+				<div className="flex flex-col md:flex-row gap-y-5 justify-between md:mx-40 mt-5 md:mt-10">
 					<motion.div
 						className="flex flex-col items-center"
 						initial={{ y: 100, opacity: 0 }}
@@ -43,8 +43,9 @@ export default function SixthPart() {
 					>
 						<img src="/Two.png" />
 						<p className="text-sm text-gray-500 text-center">
-							Let others anonymously answer the same <br />{" "}
-							questions about you
+							Let others anonymously answer the same{" "}
+							<br className="hidden md:block" /> questions about
+							you
 						</p>
 					</motion.div>
 					<motion.div
@@ -59,13 +60,14 @@ export default function SixthPart() {
 					>
 						<img src="/Three.png" />
 						<p className="text-sm text-gray-500 text-center">
-							Find out where you and others see things <br /> the
-							same way - and where not!
+							Find out where you and others see things{" "}
+							<br className="hidden md:block" /> the same way -
+							and where not!
 						</p>
 					</motion.div>
 				</div>
 
-				<div className="flex justify-center items-center mt-10">
+				<div className="hidden md:flex justify-center items-center mt-10">
 					<div className="bg-white w-[750px] h-56 rounded-3xl">
 						<div className="relative mt-28 mx-10">
 							<div className="bg-gray-300 h-0.5 w-full absolute top-1/2 transform -translate-y-1/2"></div>

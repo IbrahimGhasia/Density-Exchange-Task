@@ -9,8 +9,8 @@ export default function IndexPage() {
 	});
 	return (
 		<div className="mt-28" ref={ref}>
-			<div className="bg-_purple h-[650px] rounded-3xl grid grid-cols-2 items-center relative overflow-hidden">
-				<div className="px-14 mt-20">
+			<div className="bg-_purple md:h-[650px] rounded-3xl grid md:grid-cols-2 items-center relative overflow-hidden">
+				<div className="px-5 md:px-14 mt-20">
 					<h6 className="text-md text-black font-normal">
 						Ahead app
 					</h6>
@@ -18,12 +18,12 @@ export default function IndexPage() {
 						initial={{ x: -1000 }}
 						animate={inView ? { x: 0 } : {}}
 						transition={{ type: "tween", duration: 1 }}
-						className="text-black text-7xl font-bold mt-5"
+						className="text-black text-3xl md:text-7xl font-bold mt-5"
 					>
 						Master your life by mastering emotions
 					</motion.h1>
 
-					<div className="flex items-center gap-10">
+					<div className="flex items-center gap-2 md:gap-10">
 						<motion.div
 							initial={{ y: 100, opacity: 0 }}
 							animate={inView ? { y: 0, opacity: 100 } : {}}
@@ -43,7 +43,7 @@ export default function IndexPage() {
 							<div className="flex gap-1">
 								<motion.img
 									src="/star.png"
-									className="h-6 w-6"
+									className="md:h-6 h-4 md:w-6 w-4"
 									initial={{ y: 100, opacity: 0 }}
 									animate={
 										inView ? { y: 0, opacity: 100 } : {}
@@ -56,7 +56,7 @@ export default function IndexPage() {
 								/>
 								<motion.img
 									src="/star.png"
-									className="h-6 w-6"
+									className="md:h-6 h-4 md:w-6 w-4"
 									initial={{ y: 100, opacity: 0 }}
 									animate={
 										inView ? { y: 0, opacity: 100 } : {}
@@ -69,7 +69,7 @@ export default function IndexPage() {
 								/>
 								<motion.img
 									src="/star.png"
-									className="h-6 w-6"
+									className="md:h-6 h-4 md:w-6 w-4"
 									initial={{ y: 100, opacity: 0 }}
 									animate={
 										inView ? { y: 0, opacity: 100 } : {}
@@ -82,7 +82,7 @@ export default function IndexPage() {
 								/>
 								<motion.img
 									src="/star.png"
-									className="h-6 w-6"
+									className="md:h-6 h-4 md:w-6 w-4"
 									initial={{ y: 100, opacity: 0 }}
 									animate={
 										inView ? { y: 0, opacity: 100 } : {}
@@ -95,7 +95,7 @@ export default function IndexPage() {
 								/>
 								<motion.img
 									src="/star.png"
-									className="h-6 w-6"
+									className="md:h-6 h-4 md:w-6 w-4"
 									initial={{ y: 100, opacity: 0 }}
 									animate={
 										inView ? { y: 0, opacity: 100 } : {}

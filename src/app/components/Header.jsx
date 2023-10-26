@@ -3,7 +3,7 @@ import { navLinks } from "../constants/NavLinks";
 
 export default function Header() {
 	return (
-		<div className="fixed top-0 left-0 right-0 z-10 bg-white">
+		<div className="hidden md:block fixed top-0 left-0 right-0 z-10 bg-white">
 			<div className="flex justify-between items-center px-20 py-6">
 				<div>
 					<img

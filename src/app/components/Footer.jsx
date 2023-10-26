@@ -5,7 +5,7 @@ export default function Footer() {
 			<div className="flex flex-col justify-center items-center mt-10">
 				<img src="logo.png" className="rounded-xl w-16 h-16" />
 				<h3 className="text-3xl text-_darkPurple mt-2">ahead</h3>
-				<div className="flex gap-20 mt-5">
+				<div className="flex flex-col md:flex-row gap-5 md:gap-20 mt-5">
 					<div className="flex items-center gap-2">
 						<img
 							src="/location.png"
